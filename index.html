@@ -34,26 +34,120 @@
         </div>
       </div>
 
-      <!-- Game 2: Prince of Persia (DOS) -->
+            <!-- Game 2 -->
       <div class="game-card">
         <div class="card-info">
-          <h3>Prince of Persia</h3>
-          <p>ऑरिजिनल रेट्रो पीसी प्लैटफ़ॉर्मर</p>
-          <button onclick="loadGame('Prince of Persia', 'https://dos.zone/player/?bundleUrl=https%3A%2F%2Fcdn.dos.zone%2Fcustom%2Fdos%2Fprince-of-persia.jsdos?anonymous=1')">Play Now</button>
+          <span class="badge badge-gta">GTA SERIES</span>
+          <h3>GTA: London 1969</h3>
+          <p>Classic vintage London map aur missions</p>
+          <button onclick="loadGame('GTA London', 'https://archive.org/embed/psx_gtalondon')">Play Now</button>
         </div>
       </div>
 
-      <!-- Game 3: Pac-Man HTML5 -->
+            <!-- Game 3 -->
       <div class="game-card">
         <div class="card-info">
-          <h3>Classic Pac-Man</h3>
-          <p>ओरिजिनल आर्केड स्टाइल गेम</p>
-          <button onclick="loadGame('Pac-Man', 'https://freepacman.org/')">Play Now</button>
+          <span class="badge badge-gta">GTA SERIES</span>
+          <h3>Grand Theft Auto 2</h3>
+          <p>Gang wars, respect meter aur open-world action</p>
+          <button onclick="loadGame('GTA 2', 'https://archive.org/embed/psx_gta2')">Play Now</button>
         </div>
       </div>
+
+      <!-- Game 4 -->
+      <div class="game-card">
+        <div class="card-info">
+          <span class="badge badge-gta">GTA SERIES</span>
+          <h3>GTA Advance</h3>
+          <p>Liberty City mein car stealing aur mission mode</p>
+          <button onclick="loadGame('GTA Advance', 'https://archive.org/embed/gba_gta')">Play Now</button>
+        </div>
+      </div>
+
+      <!-- Game 5 -->
+      <div class="game-card">
+        <div class="card-info">
+          <span class="badge badge-pc">PC CLASSIC</span>
+          <h3>Road Rash</h3>
+          <p>Legendary bike fighting aur police chase racing</p>
+          <button onclick="loadGame('Road Rash', 'https://archive.org/embed/road-rash-3do')">Play Now</button>
+        </div>
+      </div>
+
+            <!-- Game 6 -->
+      <div class="game-card">
+        <div class="card-info">
+          <span class="badge badge-pc">PC FPS</span>
+          <h3>Doom (1993 PC)</h3>
+          <p>All-time classic 90s FPS action shooter</p>
+          <button onclick="loadGame('Doom', 'https://archive.org/embed/doom_shareware_1993')">Play Now</button>
+        </div>
+      </div>
+
+      <!-- Game 7 -->
+      <div class="game-card">
+        <div class="card-info">
+          <span class="badge badge-pc">PC 3D</span>
+          <h3>Quake (1996 PC)</h3>
+          <p>id Software ka pehla full 3D PC shooter</p>
+          <button onclick="loadGame('Quake', 'https://archive.org/embed/quake_shareware')">Play Now</button>
+        </div>
+      </div>
+
+      <!-- Game 8 -->
+      <div class="game-card">
+        <div class="card-info">
+          <span class="badge badge-pc">PC CLASSIC</span>
+          <h3>Wolfenstein 3D</h3>
+          <p>Original classic dungeon 3D gunfight game</p>
+          <button onclick="loadGame('Wolfenstein 3D', 'https://archive.org/embed/msdos_Wolfenstein_3D_1992')">Play Now</button>
+        </div>
+      </div>
+
+            <!-- Game 9 -->
+      <div class="game-card">
+        <div class="card-info">
+          <span class="badge badge-retro">PC DOS</span>
+          <h3>Prince of Persia (1990)</h3>
+          <p>Original vintage platformer PC adventure game</p>
+          <button onclick="loadGame('Prince of Persia', 'https://archive.org/embed/msdos_Prince_of_Persia_1990')">Play Now</button>
+        </div>
+      </div>
+
+      <!-- Game 10 -->
+      <div class="game-card">
+        <div class="card-info">
+          <span class="badge badge-pc">RACING</span>
+          <h3>The Need for Speed</h3>
+          <p>Pehla original NFS PC supercar racing edition</p>
+          <button onclick="loadGame('Need for Speed', 'https://archive.org/embed/need-for-speed-3do')">Play Now</button>
+        </div>
+      </div>
+
     </div>
   </main>
 
-  <script src="script.js"></script>
+  <script>
+    function loadGame(title, gameUrl) {
+      const playerBox = document.getElementById('player-container');
+      const gameFrame = document.getElementById('game-frame');
+      const gameTitle = document.getElementById('current-game-title');
+
+      gameTitle.innerText = "Playing: " + title;
+      gameFrame.src = gameUrl;
+      
+      playerBox.classList.remove('hidden');
+      playerBox.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function closeGame() {
+      const playerBox = document.getElementById('player-container');
+      const gameFrame = document.getElementById('game-frame');
+
+      gameFrame.src = "";
+      playerBox.classList.add('hidden');
+    }
+  </script>
 </body>
-</html>
+  </html>
+  
