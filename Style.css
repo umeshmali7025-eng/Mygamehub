@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #0f111a;
+  color: #ffffff;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #ffb703;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+header p {
+  color: #8f9ca7;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* गेम प्लेयर स्क्रीन */
+.player-box {
+  background: #1a1d29;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  border: 1px solid #2d3246;
+}
+
+.player-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background: #131620;
+}
+
+.close-btn {
+  background: #e63946;
+  border: none;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+iframe {
+  width: 100%;
+  height: 420px;
+  border: none;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+/* गेम्स कार्ड ग्रिड */
+.games-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+@media (min-width: 600px) {
+  .games-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.game-card {
+  background: #181b26;
+  border: 1px solid #282d3f;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-info h3 {
+  font-size: 18px;
+  color: #00f0ff;
+  margin-bottom: 6px;
+}
+
+.card-info p {
+  font-size: 13px;
+  color: #9aa0a6;
+  margin-bottom: 15px;
+}
+
+.card-info button {
+  width: 100%;
+  background: #ffb703;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card-info button:active {
+  background: #e09f00;
+}
